@@ -1,6 +1,6 @@
 import { useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useRouter } from 'next/router';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState, JSX } from 'react';
 
 export const Default = (): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {JSX} from 'react';
 import { ImageField, NextImage } from '@sitecore-jss/sitecore-jss-nextjs';
 import { DottedAccent } from 'components/NonSitecore/DottedAccent';
 

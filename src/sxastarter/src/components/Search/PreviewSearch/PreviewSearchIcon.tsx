@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export type PreviewSearchIconProps = {
   onClick?: (keyphrase: string) => void;
   className?: string;

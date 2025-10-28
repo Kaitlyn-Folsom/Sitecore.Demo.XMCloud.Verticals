@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, ReactNode, JSX } from 'react';
 import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useI18n } from 'next-localization';
 

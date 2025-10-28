@@ -1,4 +1,5 @@
 import { ImageField, NextImage } from '@sitecore-jss/sitecore-jss-nextjs';
+import { JSX } from 'react';
 
 export const IconAccent = ({
   image,

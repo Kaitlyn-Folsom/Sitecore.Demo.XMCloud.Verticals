@@ -5,7 +5,7 @@ import {
   TextField,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import React from 'react';
+import React, {JSX} from 'react';
 
 interface Fields {
   data: {

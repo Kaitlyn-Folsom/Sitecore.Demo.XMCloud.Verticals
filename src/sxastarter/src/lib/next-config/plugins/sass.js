@@ -11,6 +11,8 @@ const SassAlias = require('sass-alias');
           '@sass': path.join(__dirname, '../../../assets', 'sass'),
           '@fontawesome': path.join(__dirname, '../../../../node_modules', 'font-awesome'),
         }).getImporter(),
+        quietDeps: true,
+        silenceDeprecations: ["import", "legacy-js-api"],
       },
     });
 };

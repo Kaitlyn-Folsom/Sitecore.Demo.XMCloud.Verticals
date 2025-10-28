@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {JSX} from 'react';
 import { Field, ImageField, Text, NextImage } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 

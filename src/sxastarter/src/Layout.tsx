@@ -23,6 +23,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
   const mainClassPageEditing = mode.isEditing ? 'editing-mode' : 'prod-mode';
+  const importMapDynamic = () => import('.sitecore/import-map');
   const theme = layout.sitecore.context.site?.name as string;
   const contextSiteClass = `site-${theme?.toLowerCase()}`;
 
@@ -40,7 +41,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       <ParallaxProvider>
         <div className={`${mainClassPageEditing} body ${contextSiteClass}`}>
           {mode.isDesignLibrary ? (
-            <DesignLibrary />
+            <DesignLibrary loadImportMap={importMapDynamic} />
           ) : (
             <>
               <header>

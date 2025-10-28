@@ -10,7 +10,7 @@ import {
   LinkField,
   Placeholder,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { IconAccent } from 'components/NonSitecore/IconAccent';
 import { DottedAccent } from 'components/NonSitecore/DottedAccent';

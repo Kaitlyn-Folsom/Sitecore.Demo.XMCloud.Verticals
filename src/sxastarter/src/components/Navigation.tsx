@@ -5,7 +5,7 @@ import {
   Text,
   TextField,
   useSitecoreContext,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import PreviewSearchWidget, { ArticleModel } from './Search/PreviewSearch/PreviewSearch';
 import { isSearchSDKEnabled } from 'src/services/SearchSDKService';
 import PreviewSearchIcon from './Search/PreviewSearch/PreviewSearchIcon';

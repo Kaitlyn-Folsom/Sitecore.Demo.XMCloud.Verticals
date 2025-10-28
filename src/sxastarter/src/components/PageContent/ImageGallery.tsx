@@ -1,5 +1,5 @@
 import React, {JSX} from 'react';
-import { ImageField, NextImage } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ImageField, NextImage } from '@sitecore-content-sdk/nextjs';
 import { DottedAccent } from 'components/NonSitecore/DottedAccent';
 
 export type ImageItemProps = {

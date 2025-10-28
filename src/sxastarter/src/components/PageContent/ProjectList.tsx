@@ -8,7 +8,7 @@ import {
   RichTextField,
   withDatasourceCheck,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
 
 interface Fields {

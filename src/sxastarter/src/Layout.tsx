@@ -3,7 +3,7 @@
  */
 import React, { JSX } from 'react';
 import Head from 'next/head';
-import { Placeholder, LayoutServiceData, Field, HTMLLink, DesignLibrary, RenderingType } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Placeholder, LayoutServiceData, Field, HTMLLink, DesignLibrary, RenderingType } from '@sitecore-content-sdk/nextjs';
 import config from 'temp/config';
 import Scripts from 'src/Scripts';
 import { ParallaxProvider } from 'react-scroll-parallax';

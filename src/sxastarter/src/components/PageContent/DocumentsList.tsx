@@ -7,7 +7,7 @@ import {
   Text,
   useSitecoreContext,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import useVisibility from 'src/hooks/useVisibility';
 
 interface Fields {

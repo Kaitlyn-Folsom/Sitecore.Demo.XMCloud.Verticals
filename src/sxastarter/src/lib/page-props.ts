@@ -4,7 +4,7 @@ import {
   LayoutServiceData,
   SiteInfo,
   HTMLLink,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 
 /**
  * Sitecore page props

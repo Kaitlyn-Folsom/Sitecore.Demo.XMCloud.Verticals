@@ -1,5 +1,5 @@
 import React, { useState, JSX } from 'react';
-import { Field, RichText, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, RichText, Text } from '@sitecore-content-sdk/nextjs';
 
 interface QuestionFields {
   Question: Field<string>;

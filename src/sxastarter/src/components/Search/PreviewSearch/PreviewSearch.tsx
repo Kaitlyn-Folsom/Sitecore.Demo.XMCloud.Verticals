@@ -8,7 +8,7 @@ import { FilterEqual, WidgetDataType, usePreviewSearch, widget } from '@sitecore
 import { ArticleCard, Presence, PreviewSearch } from '@sitecore-search/ui';
 import { PageController } from '@sitecore-search/react';
 import Spinner from '../components/Spinner/Spinner';
-import { useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
 
 const DEFAULT_IMG_URL = 'https://placehold.co/500x300?text=No%20Image';
 export type ArticleModel = {

@@ -1,4 +1,4 @@
-import { ImageField, NextImage, Placeholder } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ImageField, NextImage, Placeholder } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import React, {JSX} from 'react';
 

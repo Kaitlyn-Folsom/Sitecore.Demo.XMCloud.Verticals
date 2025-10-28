@@ -1,5 +1,5 @@
 import React, {JSX} from 'react';
-import { Field, Text, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
 import { CountUp } from 'components/NonSitecore/CountUp';
 
 interface Fields {

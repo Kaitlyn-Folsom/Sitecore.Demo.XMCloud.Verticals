@@ -4,7 +4,7 @@ import {
   Text,
   TextField,
   useSitecoreContext,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import React, {JSX} from 'react';
 
 interface Fields {

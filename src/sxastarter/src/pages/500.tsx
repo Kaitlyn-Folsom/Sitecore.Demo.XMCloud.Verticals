@@ -4,7 +4,7 @@ import {
   GraphQLErrorPagesService,
   SitecoreContext,
   ErrorPages,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import { SitecorePageProps } from 'lib/page-props';
 import Layout from 'src/Layout';
 import { componentBuilder } from 'temp/componentBuilder';

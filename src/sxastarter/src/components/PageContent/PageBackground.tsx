@@ -6,7 +6,7 @@ import {
   Placeholder,
   Text,
   RichTextField,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { ParallaxBackgroundImage } from 'components/NonSitecore/ParallaxBackgroundImage';
 import Head from 'next/head';

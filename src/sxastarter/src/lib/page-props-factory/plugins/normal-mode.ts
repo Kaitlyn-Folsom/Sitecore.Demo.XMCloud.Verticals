@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
-import { DictionaryService, LayoutService } from '@sitecore-jss/sitecore-jss-nextjs';
+import { DictionaryService, LayoutService } from '@sitecore-content-sdk/nextjs';
 import { dictionaryServiceFactory } from 'lib/dictionary-service-factory';
 import { layoutServiceFactory } from 'lib/layout-service-factory';
 import { SitecorePageProps } from 'lib/page-props';

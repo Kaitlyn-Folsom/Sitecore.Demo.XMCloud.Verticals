@@ -5,7 +5,7 @@ import {
   NextImage,
   Text,
   useSitecoreContext,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import { CountUp } from 'components/NonSitecore/CountUp';
 import { DottedAccent } from 'components/NonSitecore/DottedAccent';
 

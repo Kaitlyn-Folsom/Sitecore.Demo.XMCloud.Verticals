@@ -7,7 +7,7 @@ import {
   RichText,
   RichTextField,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 import {
   FacebookIcon,

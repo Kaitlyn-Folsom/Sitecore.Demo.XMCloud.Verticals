@@ -3,7 +3,7 @@ import {
   StaticPath,
   constants,
   SiteInfo,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 import config from 'temp/config';
 import { SitemapFetcherPlugin } from '..';
 import { GetStaticPathsContext } from 'next';

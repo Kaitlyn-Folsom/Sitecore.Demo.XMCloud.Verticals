@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactNode, JSX } from 'react';
-import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text } from '@sitecore-content-sdk/nextjs';
 import { useI18n } from 'next-localization';
 
 interface Fields {

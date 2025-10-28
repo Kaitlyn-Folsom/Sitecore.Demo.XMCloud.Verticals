@@ -1,5 +1,5 @@
 import React, {JSX} from 'react';
-import { ImageField, Image, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ImageField, Image, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 export type ParallaxImageProps = {

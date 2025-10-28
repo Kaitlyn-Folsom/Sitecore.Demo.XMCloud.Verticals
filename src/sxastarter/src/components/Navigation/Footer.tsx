@@ -8,7 +8,7 @@ import {
   RichTextField,
   RichText,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Image1: ImageField;

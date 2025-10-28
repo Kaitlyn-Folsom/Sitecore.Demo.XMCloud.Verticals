@@ -6,7 +6,7 @@ import {
   RichText,
   RichTextField,
   Text,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Title: Field<string>;

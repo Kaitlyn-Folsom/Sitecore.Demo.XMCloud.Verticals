@@ -1,5 +1,5 @@
 import React, {JSX} from 'react';
-import { Field, ImageField, Text, NextImage } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, ImageField, Text, NextImage } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 interface Fields {

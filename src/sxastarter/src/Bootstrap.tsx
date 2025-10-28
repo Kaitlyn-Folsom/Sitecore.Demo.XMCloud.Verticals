@@ -3,7 +3,7 @@ import { SitecorePageProps } from 'lib/page-props';
 import { CloudSDK } from '@sitecore-cloudsdk/core/browser';
 import '@sitecore-cloudsdk/events/browser';
 import config from 'temp/config';
-import { LayoutServicePageState, RenderingType } from '@sitecore-jss/sitecore-jss-nextjs';
+import { LayoutServicePageState, RenderingType } from '@sitecore-content-sdk/nextjs';
 
 /**
  * The Bootstrap component is the entry point for performing any initialization logic

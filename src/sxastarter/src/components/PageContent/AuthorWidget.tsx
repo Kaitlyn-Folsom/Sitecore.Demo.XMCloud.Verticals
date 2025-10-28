@@ -9,7 +9,7 @@ import {
   LinkField,
   Link,
   NextImage,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+} from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Name: Field<string>;

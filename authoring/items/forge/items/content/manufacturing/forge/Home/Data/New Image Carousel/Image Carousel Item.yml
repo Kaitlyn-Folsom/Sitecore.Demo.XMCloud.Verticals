@@ -1,0 +1,58 @@
+﻿---
+ID: "ea8400cb-178b-45fb-a586-9d9851ea67a3"
+Parent: "89b91e59-a8c3-464c-923c-3c711667df0a"
+Template: "03ba85aa-ad3e-412b-b6c3-0c2af639b49f"
+Path: /sitecore/content/manufacturing/forge/Home/Data/New Image Carousel/Image Carousel Item
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1f0611f4-0d1b-412a-873b-820549318583"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T145907Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "4d806366-a3b0-460d-b84f-87383453372e"
+      Hint: image
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/9fe0e39e9cb04da093c40eff7f3afe48?v=28dfe91e" dam-id="RjLBdeoDRIq7me6bsY2Aaw" width="1536" height="1024" alt="Turbine.png" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/68313/thumbnail" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "58b4e062-1aab-4b9a-aff9-3e60f941a03e"
+      Hint: backgroundText
+      Value: Forge
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "259b3265-fc43-438b-8b3f-5552ad01d7c6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T182229Z
+    - ID: "f4e44a85-84c1-4f40-957d-49732e92706b"
+      Hint: link
+      Value: |
+        <link class="" id="48b28816-3a18-4e1d-8615-9b425ed8dbf2" querystring="" anchor="" target="" title="" linktype="internal" text="See our Solutions" url="/manufacturing/forge/Home/Products" />

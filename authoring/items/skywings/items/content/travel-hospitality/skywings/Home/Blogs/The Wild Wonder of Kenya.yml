@@ -1,0 +1,82 @@
+﻿---
+ID: "3ade09a8-16b3-4cbc-a42a-d9d208a3ef7a"
+Parent: "58c58f38-b6c7-4730-b1f3-7a798f3be00e"
+Template: "33724dcb-6159-4d19-9ba7-04b604fc05b6"
+Path: "/sitecore/content/travel-hospitality/skywings/Home/Blogs/The Wild Wonder of Kenya"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{18F93E76-4E49-4605-816D-309CDFE92DC7}" />
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "ec8802b9-5cb4-4284-a52a-723b62511076"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: The Wild Wonder of Kenya
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "034b3f54-f69c-440a-8992-723ba3ee5706"
+      Hint: metadataKeywords
+      Value: Kenya safari guide, Masai Mara safari, Great Migration Kenya, Kenya wildlife tours, Kenya cultural experiences, Nairobi attractions, Kenya itinerary
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251027T191209Z
+    - ID: "2b26fe63-e7b1-4456-9672-bfe52a80015f"
+      Hint: pageSummary
+      Value: Witness Kenya’s Masai Mara magic — elephants at dawn, lions beneath acacias, and the Great Migration thundering across the plains.
+    - ID: "3bbae199-5c49-4a34-9fb5-1819d904f501"
+      Hint: ReadTime
+      Value: 7 min
+    - ID: "406b0cf0-5368-4e9e-9c1c-f153c667055f"
+      Hint: Category
+      Value: Destination
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: New page
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "76c6d241-2560-4798-bf81-1140dde00e81"
+      Hint: metadataTitle
+      Value: Witness nature’s greatest show where the savannah meets the sky.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "688c87a5-a074-456a-80b2-234d3bc81afa"
+    - ID: "99cd63ff-97ea-409a-8e03-7f635be6198e"
+      Hint: Title
+      Value: "Safari Soul: The Wild Wonder of Kenya"
+    - ID: "a0c3720f-afe7-4b58-97d6-02c92d5add92"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><p>Witness nature’s greatest show where the savannah meets the sky.<br /><br />In Kenya’s Masai Mara, life moves to the rhythm of the wild. Watch elephants march at dawn, lions laze beneath acacias, and the Great Migration thunder across the plains. Beyond safari, connect with the Maasai people, explore Nairobi’s creative culture, or unwind on the Indian Ocean coast. Kenya reminds us — wonder is very much alive.</p></div>
+    - ID: "a241b564-1997-4ae4-a610-87713757af69"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/a4344930ccb8478698a7e69f8bb99657?v=718b4764" dam-id="uBBMGKpyTTavZbL1Fw1Nxg" width="3024" height="4032" alt="Hammock.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/49435/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251027T195146Z
+    - ID: "e2394816-3e1f-48bf-a224-a6d587639114"
+      Hint: ogImage
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/a4344930ccb8478698a7e69f8bb99657?v=718b4764" dam-id="uBBMGKpyTTavZbL1Fw1Nxg" width="3024" height="4032" alt="Hammock.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/49435/thumbnail" />
+    - ID: "e8231677-93ae-42a3-a175-093ae0221f81"
+      Hint: PublishDate
+      Value: 20250203T000000Z

@@ -1,81 +1,83 @@
-# Vertical Demos on XM Cloud
+# XM Cloud Front End Application Industry Verticals Starter Kits
 
-A headless multi-site solution focused on XM Cloud content and site management capabilities. Includes easily customizable sample sites for select industries.
+## Table of Contents
 
-✨ 42 beautiful custom components - enough to build any site you can dream up
+- [Introduction](#introduction)
+- [GitHub Template](#gitHub-template)
+- [Prerequisites](#prerequisites)
+- [Getting Started Guide](#getting-started-guide)
+- [Running the Industry Vertical Starter Kit](#running-the-next.js-starter-kit)
 
-🌍 Multisite support (3 sites ready to go, and more can easily be added)
+## Introduction
 
-🇨🇦 Multilingual (English and French-Canadian)
+This repository contains multiple industry verticals, and the SPA Starters monorepo (which includes a Node Proxy Application and and SPA starter apps) for Sitecore XM Cloud Development. It is intended to get developers up and running quickly with a new front end project that is integrated with Sitecore XM Cloud.
 
-🌓 Light and dark themes
+[Deploying XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploying-xm-cloud.html)
 
-🔗 Single rendering host (with some magic to make it work for completely different sites)
+Here's a quick overview of the major folders and their purpose:
 
-🎨 Custom component variants/styles
+- `/industry-verticals`:
+  Contains starter front-end applications. Each subfolder is a working app
 
-🎯 Embedded Personalization
+  - retail: [README](https://github.com/Sitecore/Sitecore.Demo.XMCloud.IndustryVerticals.SiteTemplates/blob/main/industry-verticals/retail/README.md)
 
-📄 Seamless integration with Pages
+- `/local-containers`:
+  Contains Docker-related files for local development environments.
 
-![PLAY! Website Home Page](docs/images/launchpad.JPG)
+- `/authoring`:
+  The authoring folder is where Sitecore content items are defined and stored for deployment. These items include:
 
-This repository is a Sitecore DXP demo that is based on [sitecorelabs/xmcloud-foundation-head](https://github.com/sitecorelabs/xmcloud-foundation-head) repository and uses:
+  - Templates: located under /items — defines the structure of content items used in the application..
+  - Powershell, Modules, etc. Organized by namespace under items/items, useful for modular development and deployment.
+  - Modules: Each module has its own .module.json file (e.g., nextjs-starter.module.json) to define what items it includes and where they should be deployed in the Sitecore content tree.
 
-- Sitecore XM Cloud
-- Sitecore JavaScript Services (JSS)
-- Next.js
+- `xmcloud.build.json`:
+  This is the primary configuration file for building and deploying rendering hosts in your XM Cloud environment.
 
-You can deploy the demo in just a few clicks at [Sitecore Demo Portal](https://portal.sitecoredemo.com/), or use one of the quick starts below to run it locally.
+  Key Sections:
 
-## Quick start (front-end app)
+  - renderingHosts: Defines one or more front-end apps to build. Each entry includes:
 
-This is the easier way to get started, as long as you have access to XM Cloud. It does not require Docker and should work on any operating system supported by Node (Mac, Windows, Linux).
+  - path: where the app is located (e.g., ./industry-verticals/retail)
 
-1. Deploy the project to XM Cloud
+  - nodeVersion: Node.js version used during build
 
-2. Download (from XM Cloud Deploy app / Developer Settings tab) and add the `.env.local` file to your app folder.
+  - jssDeploymentSecret: Deployment auth key for JSS
 
-3. Install dependencies and run your app.
+  - enabled: Whether the rendering host is active
 
-   ```ps1
-   npm install
-   npm run start:connected
-   ```
+  - buildCommand / runCommand: Custom scripts for build/start
 
-   Open http://localhost:3000 with your browser to see the result.
-   You can start editing the pages by modifying files under the \src\rendering. The pages auto-update as you edit the files.
+  - postActions: Actions that run after a successful deployment, such as warming up the CM server or triggering reindexing.
 
-## Quick start (Docker)
+  - authoringPath: Path to the folder containing Sitecore item definitions (default is ./authoring).
 
-This will work only on Windows and deploy all Content Management roles and interfaces, as well as front-end app in a container.
+## GitHub Template
 
-1. In an ADMIN terminal:
+This Github repository is a template that can be used to create your own repository. To get started, click the `Use this template` button at the top of the repository.
 
-   ```ps1
-   .\up.ps1
-   ```
+## Prerequisites
 
-   Open https://www.sxastarter.localhost with your browser to see the front-end of the website. Content Management UI will be available at https://xmcloudcm.localhost
+- Access to an Sitecore XM Cloud Environment
+- [Node.js LTS](https://nodejs.org/en/)
 
-2. Go to `/sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Datasource Item Children Resolver` and uncheck the `Include Server URL in Media URLs` checkbox.
+## Getting Started Guide
 
-## Updating color palette
+For developers new to XM Cloud you can follow the Getting Started Guide on the [Sitecore Documentation Site](https://doc.sitecore.com/xmc) to get up and running with XM Cloud. This will walk you through the process of creating a new XM Cloud Project, provisioning an Environment, deploying the NextJs Starter Kit, and finally creating your first Component.
 
-Go to the `src\sxastarter\src\assets\sass\abstracts\vars` and update the colors in the `_colors.scss` file. Note, that each site has it's own color set for both light and dark theme.
+## Running the Industry Vertical Starter Kit
 
-Note, that each site has a special `site-*` class, this allows to apply custom CSS the specific site(s).
+> **Note:** Please refer to the `README.md` of the specific industry vertical you’re working with for detailed setup instructions.
+> The following outlines the general steps to run the app locally:
 
-## Connect your local host to Pages
-
-In addition to the offical documentation https://doc.sitecore.com/xmc/en/developers/xm-cloud/connect-your-local-host-to-pages.html, some extra steps are required:
-
-1. Remove the following code from next.config.js:
-
-   ```ps1
-   assetPrefix: publicUrl,
-   ```
-
-2. Make sure that the domain name you use, i.e. https://www.sxastarter.localhost/ is added to the SXA Site definition of the site you want to edit.
-
-3. If using a local Docker as a back-end, make sure the JSS Editing Secret is set to what Pages is using.
+- Log into the Sitecore XM Cloud Deploy Portal, locate your Environment and select the `Developer Settings` tab.
+- Ensure that the `Preview` toggle is enabled.
+- In the `Local Development` section, click to copy the sample `.env` file contents to your clipboard.
+- Create a new `.env.local` file in the `./industry-verticals/retail` folder of this repository and paste the contents from your clipboard.
+- Run the following commands in the root of the repository to start the NextJs application:
+  ```bash
+  cd industry-verticals/retail
+  npm install
+  npm run dev
+  ```
+- You should now be able to access your site on `http://localhost:3000` and see your changes in real-time as you make them.

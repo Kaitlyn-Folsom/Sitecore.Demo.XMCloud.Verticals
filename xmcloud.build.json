@@ -1,59 +1,73 @@
 {
-    "renderingHosts": {
-      "xmcloudpreview": {
-        "path": "./src/sxastarter",
-        "nodeVersion": "20.10.0",
-        "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-        "enabled": true,
-        "type": "sxa",
-        "buildCommand": "build",
-        "runCommand": "next:start"
-      }
+  "renderingHosts": {
+    "nextjsstarter": {
+      "path": "./industry-verticals/retail",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
     },
-    "transforms": [
-        {
-            "xdtPath": "/xdts/",
-            "targetPath": "/"
-        }
-    ],
-    "deployItems": {
-      "modules": [
-        "renderinghost",
-        "InitItems",
-        "HeadlessSxaWebsite",
-        "HeadlessSxaWebsite-Content"
-      ]
+    "skywings": {
+      "path": "./industry-verticals/skywings",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
     },
-    "postActions": {
-        "actions":{
-          "populateSchema": {
-            "indexNames": []
-          },
-          "scsModules": {
-            "modules": [
-              "HeadlessSxaWebsite-Media"
-            ]
-          },
-          "warmUpCm": {
-            "urls": [
-              "/Utilities/InitializeComponentsLibraryId.aspx",
-              "/Utilities/InitializeHostname.aspx"
-            ]
-          },
-          "reindex": {
-            "indexNames": []
-          },
-          "publish": {
-            "path": "/sitecore",
-            "languages": [
-              "en",
-              "fr-CA",
-              "ja-JP"
-            ],
-            "itemIds": [],
-            "targets": ["Edge"],
-            "republish": false
-          }
-        }
+    "forge": {
+      "path": "./industry-verticals/forge",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
+    "gridwell": {
+      "path": "./industry-verticals/gridwell",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
+    },
+    "prosperabank": {
+      "path": "./industry-verticals/prosperabank",
+      "nodeVersion": "22.11.0",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa",
+      "buildCommand": "build",
+      "runCommand": "next:start"
     }
+  },
+  "deployItems": {
+    "modules": ["Project.retail", "skywings", "forge", "gridwell", "prosperabank"]
+  },
+  "postActions": {
+    "actions": {
+      "scsModules": {
+        "modules": ["Project.Retail-Media", "Project.Retail-Content"]
+      },
+      "warmUpCm": {
+        "urls": [
+          "/sitecore/shell",
+          "/sitecore/shell/Applications/Content%20Editor.aspx?sc_bw=1",
+          "/sitecore/client/Applications/Launchpad"
+        ]
+      },
+      "populateSchema": {
+        "indexNames": []
+      },
+      "reindex": {
+        "indexNames": []
+      }
+    }
+  },
+  "authoringPath": "./authoring"
 }

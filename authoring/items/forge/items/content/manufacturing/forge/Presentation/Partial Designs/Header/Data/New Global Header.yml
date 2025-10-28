@@ -1,0 +1,49 @@
+﻿---
+ID: "12f45ca0-85ed-44cb-9f7b-13bdea0f8a9e"
+Parent: "e0378c05-9248-4f14-9bbf-4867c1fd2333"
+Template: "efd96479-7bf2-4be1-a08a-b01e59f92cdc"
+Path: /sitecore/content/manufacturing/forge/Presentation/Partial Designs/Header/Data/New Global Header
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251027T204639Z
+    - ID: "4da75bcf-390e-46fa-ad87-926ec4db0876"
+      Hint: headerLogo
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/18ba9b69725c40439253bcd5e6a31f9a?v=a36d9aa5" dam-id="sPDmcZxoTDG2IaVmKKJFXw" width="546" height="179" alt="forge-logo.svg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/68314/thumbnail" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ca8dada4-54c5-4cb8-b9fa-2055b2b728ca"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\zach.escabedo@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T185435Z
+    - ID: "e3289100-a242-4fc7-814f-0ffef0ffe8bd"
+      Hint: headerContact
+      Value: |
+        <link linktype="external" url="www.google.com" target="" text="Connect Today" title="" class=""/>
+    - ID: "f073d52d-022c-4560-90c2-71fc674cf8bf"
+      Hint: primaryNavigationLinks
+      Value: |
+        {64530934-5A53-4D2F-A8EE-3EA4D2CD8FAB}
+        {C3CD3EA0-0A3C-43D7-AC1E-E3047D9E7A1D}
+        {31799360-9CE9-493F-80A1-2B072374030F}
+        {44CD3E1A-0237-44CB-B7D7-C8FCB324A2A3}

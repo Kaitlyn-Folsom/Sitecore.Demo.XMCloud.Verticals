@@ -1,0 +1,45 @@
+﻿---
+ID: "64530934-5a53-4d2f-a8ee-3ea4d2cd8fab"
+Parent: "8ca4450b-86cb-4494-861f-2ab829c860a5"
+Template: "cfd30fc4-07fa-471e-9f85-3a1bf425c718"
+Path: /sitecore/content/manufacturing/forge/Presentation/Partial Designs/Header/Data/New Global Header/New Primary Navigation Links/Products
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "d98a4755-1486-402d-bb51-90e0e054eda1"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251027T204751Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "14eb79a8-2b50-430e-a756-3f4ae1c6be32"
+    - ID: "969b132e-3dc2-4526-8f8d-61e3ea742df6"
+      Hint: link
+      Value: |
+        <link class="" querystring="" id="{48B28816-3A18-4E1D-8615-9B425ED8DBF2}" anchor="" target="" title="Products" linktype="internal" text="Products" url="/manufacturing/forge/Home/Products" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T174922Z

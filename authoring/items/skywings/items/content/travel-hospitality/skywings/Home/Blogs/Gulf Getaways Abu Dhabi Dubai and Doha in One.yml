@@ -1,0 +1,85 @@
+﻿---
+ID: "ea858043-4f84-4107-902c-db2117afe8d1"
+Parent: "58c58f38-b6c7-4730-b1f3-7a798f3be00e"
+Template: "33724dcb-6159-4d19-9ba7-04b604fc05b6"
+Path: "/sitecore/content/travel-hospitality/skywings/Home/Blogs/Gulf Getaways Abu Dhabi Dubai and Doha in One"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{0423B330-1A02-410D-9BBF-E0289F39F3A9}" />
+Languages:
+- Language: en
+  Fields:
+  - ID: "30e85e5d-e00a-4864-b358-7624d511deb4"
+    Hint: __Unversioned revision
+    Value: "f3c5632b-e17d-450d-b719-54932da5ecce"
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Gulf Getaways – Abu Dhabi, Dubai, and Doha in One
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "034b3f54-f69c-440a-8992-723ba3ee5706"
+      Hint: metadataKeywords
+      Value: "Middle East travel itinerary, Gulf city tour, Abu Dhabi Dubai Doha trip, luxury travel Middle East, Arabian adventure, cultural travel UAE Qatar, Gulf travel guide, three-city Middle East tour, Arabian Peninsula tourism, ultimate Gulf vacation"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251027T194318Z
+    - ID: "2b26fe63-e7b1-4456-9672-bfe52a80015f"
+      Hint: pageSummary
+      Value: Embark on the ultimate Middle Eastern adventure with a luxurious journey through Abu Dhabi, Dubai, and Doha—three iconic cities offering culture, excitement, and elegance.
+    - ID: "3bbae199-5c49-4a34-9fb5-1819d904f501"
+      Hint: ReadTime
+      Value: 7 min
+    - ID: "406b0cf0-5368-4e9e-9c1c-f153c667055f"
+      Hint: Category
+      Value: Destinations
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: New page
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "76c6d241-2560-4798-bf81-1140dde00e81"
+      Hint: metadataTitle
+      Value: Gulf Getaways – Abu Dhabi, Dubai, and Doha in One
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ba69e853-a4f1-43df-bae7-316240afbec1"
+    - ID: "99cd63ff-97ea-409a-8e03-7f635be6198e"
+      Hint: Title
+      Value: Gulf Getaways – Abu Dhabi, Dubai, and Doha in One Trip
+    - ID: "a0c3720f-afe7-4b58-97d6-02c92d5add92"
+      Hint: Content
+      Value: |
+        <div class="ck-content"><p data-start="3574" data-end="3683">Experience the ultimate Middle Eastern adventure with a whirlwind tour of three iconic cities.</p><p data-start="3685" data-end="4106">Dreaming of a journey that combines luxury, culture, and adventure? Start in <strong data-start="3762" data-end="3775">Abu Dhabi</strong>, where majestic mosques, world-class museums, and serene beaches set the tone. Next, jet to <strong data-start="3868" data-end="3877">Dubai</strong>, the city that dazzles with skyscrapers, shopping extravaganzas, and adrenaline-pumping activities. Finally, wrap up your trip in <strong data-start="4008" data-end="4016">Doha</strong>, a cultural gem where historic souks, modern architecture, and desert adventures await.</p><p data-start="4108" data-end="4494">Each city has its own personality: Abu Dhabi’s elegance and tranquility, Dubai’s energetic extravagance, and Doha’s rich cultural tapestry. Together, they create an unforgettable Gulf experience. Whether you’re indulging in fine dining, exploring iconic landmarks, or simply soaking in the Arabian sun, a journey through these three cities promises memories that will last a lifetime.</p></div>
+    - ID: "a241b564-1997-4ae4-a610-87713757af69"
+      Hint: Image
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/69503-HomePageHero-2000x800?v=cb57f2fb" dam-id="KeAY1iV1TK2fP7BFTd42Aw" width="2000" height="800" alt="david-rodrigo-Fr6zexbmjmc-unsplash.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/69503/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "d970e78d-d5e8-4acc-b576-2253f8e6384c"
+      Hint: metadataDescription
+      Value: Embark on the ultimate Middle Eastern adventure with a luxurious journey through Abu Dhabi, Dubai, and Doha—three iconic cities offering culture, excitement, and elegance.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251027T195015Z
+    - ID: "e2394816-3e1f-48bf-a224-a6d587639114"
+      Hint: ogImage
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/69503-HomePageHero-2000x800?v=cb57f2fb" dam-id="KeAY1iV1TK2fP7BFTd42Aw" width="2000" height="800" alt="david-rodrigo-Fr6zexbmjmc-unsplash.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/69503/thumbnail" />
+    - ID: "e8231677-93ae-42a3-a175-093ae0221f81"
+      Hint: PublishDate
+      Value: 20250729T000000Z

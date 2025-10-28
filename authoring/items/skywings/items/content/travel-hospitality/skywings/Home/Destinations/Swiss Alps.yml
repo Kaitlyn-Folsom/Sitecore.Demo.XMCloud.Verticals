@@ -1,0 +1,142 @@
+﻿---
+ID: "8aad5479-d9c4-4a07-a98d-12adf390a206"
+Parent: "00a15dda-fce8-4b25-ad18-7c34ef15036f"
+Template: "0d71cb45-0e21-42fa-aabd-c8caca561163"
+Path: "/sitecore/content/travel-hospitality/skywings/Home/Destinations/Swiss Alps"
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{8466D35D-2004-4A2F-9135-6FA52F5778CA}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "083684f6-5f7c-480f-bbdd-4044c33b9d84"
+      Hint: Price
+      Value: from $899
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250730T160859Z
+    - ID: "2a57b1e0-74b4-4e74-9592-36dcad743bd9"
+      Hint: Rating
+      Value: 4.9
+    - ID: "2ec668d0-921f-4883-862b-87e412441319"
+      Hint: Country
+      Value: "{41589CA5-590C-443D-9F41-E5B57F999FA8}"
+    - ID: "4a2fd42b-252b-4f1e-bd89-c15eb91971ed"
+      Hint: BestMonths
+      Value: "Dec-Mar, Jun-Sep"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Swiss Alps
+    - ID: "662a819b-bcc2-45b9-add6-20cd1f500818"
+      Hint: HolidayType
+      Value: "{D68521A1-07F0-4619-9E33-E5C73E3E1EF3}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9db9e608-50b3-4120-bb18-0f33acd2f4d0"
+    - ID: "99cd63ff-97ea-409a-8e03-7f635be6198e"
+      Hint: Title
+      Value: Swiss Alps
+    - ID: "a0c3720f-afe7-4b58-97d6-02c92d5add92"
+      Hint: Content
+      Value: <span>Breathtaking mountain landscapes perfect for skiing, hiking, and scenic train journeys.</span>
+    - ID: "ac0f1339-ea8b-4fcf-a6a0-57e12227bf3f"
+      Hint: SuggestedDuration
+      Value: "5-10 days"
+    - ID: "ae14f4e0-7dce-4bff-83e3-6d05f1de4915"
+      Hint: Highlights
+      Value: |
+        {711BF0B0-832A-4520-9AF9-FBDDEC202ABC}
+        {6BA2AB88-BF6B-4C30-B9C5-70CAB4EF771E}
+        {9C941D2A-7E9D-4E61-A1E0-EEBC2DBECFBD}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "d791da19-6daf-41bc-9e22-56d51f14d6d5"
+      Hint: Activities
+      Value: |
+        {547E76E5-5242-4DE8-A52B-BDF1CB54E4CC}
+        {0748A229-7FE3-4864-AC20-612B29173935}
+        {851D1F1F-E637-4C0E-BAC3-68B00896F982}
+        {B959CF01-48A4-4026-9799-03F825114E81}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250731T162052Z
+    - ID: "ea421706-d898-414e-a72d-0212bf5f6519"
+      Hint: ExpectedTemps
+      Value: "-5-20C"
+- Language: "ja-JP"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "083684f6-5f7c-480f-bbdd-4044c33b9d84"
+      Hint: Price
+      Value: 899ドルから
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250730T160859Z
+    - ID: "2a57b1e0-74b4-4e74-9592-36dcad743bd9"
+      Hint: Rating
+      Value: 4.9
+    - ID: "2ec668d0-921f-4883-862b-87e412441319"
+      Hint: Country
+      Value: "{41589CA5-590C-443D-9F41-E5B57F999FA8}"
+    - ID: "4a2fd42b-252b-4f1e-bd89-c15eb91971ed"
+      Hint: BestMonths
+      Value: "12月-3月、6月-9月"
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: スイスアルプス
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\johannes.zijlstra@sitecore.com
+    - ID: "662a819b-bcc2-45b9-add6-20cd1f500818"
+      Hint: HolidayType
+      Value: "{D68521A1-07F0-4619-9E33-E5C73E3E1EF3}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "37a3d6c3-ad72-4101-b4f2-480c3f0217ad"
+    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
+      Hint: __Version Name
+      Value: AI translated
+    - ID: "99cd63ff-97ea-409a-8e03-7f635be6198e"
+      Hint: Title
+      Value: スイスアルプス
+    - ID: "a0c3720f-afe7-4b58-97d6-02c92d5add92"
+      Hint: Content
+      Value: <span>スキー、ハイキング、そして景色の美しい列車の旅に最適な息を呑むような山の風景。</span>
+    - ID: "ac0f1339-ea8b-4fcf-a6a0-57e12227bf3f"
+      Hint: SuggestedDuration
+      Value: "5-10日間"
+    - ID: "ae14f4e0-7dce-4bff-83e3-6d05f1de4915"
+      Hint: Highlights
+      Value: |
+        {711BF0B0-832A-4520-9AF9-FBDDEC202ABC}
+        {6BA2AB88-BF6B-4C30-B9C5-70CAB4EF771E}
+        {9C941D2A-7E9D-4E61-A1E0-EEBC2DBECFBD}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\yijin.wong@sitecore.com
+    - ID: "d791da19-6daf-41bc-9e22-56d51f14d6d5"
+      Hint: Activities
+      Value: |
+        {547E76E5-5242-4DE8-A52B-BDF1CB54E4CC}
+        {0748A229-7FE3-4864-AC20-612B29173935}
+        {851D1F1F-E637-4C0E-BAC3-68B00896F982}
+        {B959CF01-48A4-4026-9799-03F825114E81}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251027T072757Z
+    - ID: "ea421706-d898-414e-a72d-0212bf5f6519"
+      Hint: ExpectedTemps
+      Value: "-5-20℃"

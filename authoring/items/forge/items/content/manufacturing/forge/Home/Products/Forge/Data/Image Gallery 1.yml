@@ -1,0 +1,66 @@
+﻿---
+ID: "7d593074-b2c2-4b9c-a777-057082711a01"
+Parent: "6d2aaef5-5d64-4fe9-9a65-d00f26151259"
+Template: "4eb24890-61ec-4283-8c61-c55a86d1fe2a"
+Path: /sitecore/content/manufacturing/forge/Home/Products/Forge/Data/Image Gallery 1
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{A053ED9F-4099-4682-9411-2B4C98E481E4}"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "bdbafca4-0071-4d76-a9a1-cab8f812f49c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20251028T152938Z
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{12FFAC4C-565F-4C9A-B63E-7F77E96B4D1F}"
+    - ID: "45324e3c-4e19-41d7-9497-bdcde2228eb1"
+      Hint: image2
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/18ca5ecd79b742db974ae0686fc989f1?v=7c6f12e0" dam-id="Vy51PEKJRAqLs-VFsiVF_A" width="1100" height="619" alt="GettyImages-1192643031.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/39709/thumbnail" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "58d5ed64-d50a-4ea7-ba39-f5d2e98c7c3e"
+      Hint: title
+      Value: The Power of Forge
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "69a878be-bdf4-4509-a304-238b0a24bac4"
+      Hint: image4
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/7b94d3c0e51a453f9a558d8ba62fe1e0?v=ade82d26" dam-id="oInLruxtSZCRvnYlb4VEmw" width="1100" height="924" alt="GettyImages-523684614.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/41608/thumbnail" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5fdde660-81de-468e-bda6-fd9220c0b625"
+    - ID: "a5a74a19-c942-421c-9ff5-c3116fcffa0d"
+      Hint: image1
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/e5859c4f765142dda353708ba91b83a2?v=076537e1" dam-id="2X1mQntGTReQgN3RK_6itQ" width="1100" height="732" alt="GettyImages-929834976.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/40423/thumbnail" />
+    - ID: "a7be6790-3f1a-43fc-94bb-302604c97081"
+      Hint: description
+      Value: "Harness the Power: Turbines delivering the next experience!"
+    - ID: "b293c09d-fd8e-4eee-97bd-0f30f3f4ca10"
+      Hint: image3
+      Value: |
+        <Image src="https://starter-verticals.sitecoresandbox.cloud/api/public/content/49879-LandingPageHero-2000x600?v=b679a741" dam-id="HJjapIbaRxuXTdx8xZj8Yg" width="2000" height="600" alt="GettyImages-535103313.jpg" dam-content-type="Image" thumbnailsrc="https://starter-verticals.sitecoresandbox.cloud/api/gateway/49879/thumbnail" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\angela.gustafson@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20251028T160418Z

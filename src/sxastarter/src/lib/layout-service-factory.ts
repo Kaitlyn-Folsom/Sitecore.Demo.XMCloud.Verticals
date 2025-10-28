@@ -4,7 +4,7 @@ import {
   GraphQLLayoutService,
   constants,
 } from '@sitecore-content-sdk/nextjs';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import clientFactory from 'lib/graphql-client-factory';
 
 /**
@@ -34,10 +34,10 @@ export class LayoutServiceFactory {
             parseInt(process.env.GRAPH_QL_SERVICE_RETRIES, 10)) as number,
         })
       : new RestLayoutService({
-          apiHost: config.sitecoreApiHost,
-          apiKey: config.sitecoreApiKey,
+          apiHost: scConfig.sitecoreApiHost,
+          apiKey: scConfig.sitecoreApiKey,
           siteName,
-          configurationName: config.layoutServiceConfigurationName,
+          configurationName: scConfig.layoutServiceConfigurationName,
         });
   }
 }

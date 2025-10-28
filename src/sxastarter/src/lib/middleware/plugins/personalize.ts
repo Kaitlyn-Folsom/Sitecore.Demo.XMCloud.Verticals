@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { PersonalizeMiddleware } from '@sitecore-content-sdk/nextjs/middleware';
 import { MiddlewarePlugin } from '..';
 import clientFactory from 'lib/graphql-client-factory';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import { siteResolver } from 'lib/site-resolver';
 
 /**
@@ -32,8 +32,8 @@ class PersonalizePlugin implements MiddlewarePlugin {
       },
       // Configuration for your Sitecore CDP endpoint
       cdpConfig: {
-        sitecoreEdgeUrl: config.sitecoreEdgeUrl,
-        sitecoreEdgeContextId: config.sitecoreEdgeContextId,
+        sitecoreEdgeUrl: scConfig.sitecoreEdgeUrl,
+        sitecoreEdgeContextId: scConfig.sitecoreEdgeContextId,
         timeout:
           (process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT &&
             parseInt(process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT)) ||

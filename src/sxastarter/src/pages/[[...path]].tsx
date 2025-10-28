@@ -7,13 +7,12 @@ import { handleEditorFastRefresh } from '@sitecore-content-sdk/nextjs/utils';
 import { SitecorePageProps } from 'lib/page-props';
 import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import { componentBuilder } from 'temp/componentBuilder';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 
 const SitecorePage = ({
   notFound,
   componentProps,
   layoutData,
-  headLinks,
 }: SitecorePageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore editors do not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
@@ -32,14 +31,10 @@ const SitecorePage = ({
       <SitecoreContext
         componentFactory={componentBuilder.getComponentFactory({ isEditing })}
         layoutData={layoutData}
-        api={{
-          edge: {
-            contextId: config.sitecoreEdgeContextId,
-            edgeUrl: config.sitecoreEdgeUrl,
-          },
-        }}
+        api={scConfig.api}
+        page={page}
       >
-        <Layout layoutData={layoutData} headLinks={headLinks} />
+        <Layout layoutData={layoutData} />
       </SitecoreContext>
     </ComponentPropsContext>
   );

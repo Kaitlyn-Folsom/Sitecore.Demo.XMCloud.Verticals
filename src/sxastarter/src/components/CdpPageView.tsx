@@ -5,7 +5,7 @@ import {
 } from '@sitecore-content-sdk/nextjs';
 import { useEffect, JSX } from 'react';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 
 /**
  * This is the CDP page view component.
@@ -37,7 +37,7 @@ const CdpPageView = (): JSX.Element => {
       return;
     }
 
-    const language = route.itemLanguage || config.defaultLanguage;
+    const language = route.itemLanguage || scConfig.defaultLanguage;
     const scope = process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE;
 
     const pageVariantId = CdpHelper.getPageVariantId(

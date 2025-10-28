@@ -1,6 +1,6 @@
 import { SitecorePageProps } from 'lib/page-props';
 import { Plugin } from '..';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import { getDesignLibraryStylesheetLinks } from '@sitecore-content-sdk/nextjs';
 
 class ComponentThemesPlugin implements Plugin {
@@ -12,8 +12,8 @@ class ComponentThemesPlugin implements Plugin {
     props.headLinks.push(
       ...getDesignLibraryStylesheetLinks(
         props.layoutData,
-        config.sitecoreEdgeContextId,
-        config.sitecoreEdgeUrl
+        scConfig.sitecoreEdgeContextId,
+        scConfig.sitecoreEdgeUrl
       ))
     return props;
   }

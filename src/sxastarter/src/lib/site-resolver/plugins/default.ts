@@ -1,13 +1,13 @@
 import { SiteInfo } from '@sitecore-content-sdk/nextjs/site';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import { SiteResolverPlugin } from '..';
 
 class DefaultPlugin implements SiteResolverPlugin {
   exec(sites: SiteInfo[]): SiteInfo[] {
     // Add default/configured site
     sites.unshift({
-      name: config.sitecoreSiteName,
-      language: config.defaultLanguage,
+      name: scConfig.sitecoreSiteName,
+      language: scConfig.defaultLanguage,
       hostName: '*',
     });
 

@@ -13,7 +13,7 @@ import { SitecorePageProps } from 'lib/page-props';
 import { graphQLEditingService } from 'lib/graphql-editing-service';
 import { Plugin } from '..';
 import { RestComponentLayoutService } from '@sitecore-content-sdk/nextjs';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 
 class PreviewModePlugin implements Plugin {
   order = 1;
@@ -22,11 +22,12 @@ class PreviewModePlugin implements Plugin {
     if (!context.preview) return props;
 
     if (isDesignLibraryPreviewData(context.previewData)) {
-      const {itemId, componentUid, site, language, renderingId, dataSourceId, version, mode } = context.previewData;
+      const { itemId, componentUid, site, language, renderingId, dataSourceId, version, mode } =
+        context.previewData;
 
       const componentService = new RestComponentLayoutService({
-        sitecoreEdgeContextId: config.sitecoreEdgeContextId,
-        sitecoreEdgeUrl: config.sitecoreEdgeUrl,
+        sitecoreEdgeContextId: scConfig.sitecoreEdgeContextId,
+        sitecoreEdgeUrl: scConfig.sitecoreEdgeUrl,
       });
 
       const componentData = await componentService.fetchComponentData({

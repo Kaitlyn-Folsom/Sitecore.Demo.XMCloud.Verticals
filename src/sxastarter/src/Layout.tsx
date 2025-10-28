@@ -4,17 +4,16 @@
 import React, { JSX } from 'react';
 import Head from 'next/head';
 import { Placeholder, LayoutServiceData, Field, HTMLLink, DesignLibrary, RenderingType } from '@sitecore-content-sdk/nextjs';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import Scripts from 'src/Scripts';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
-const publicUrl = config.publicUrl;
+const publicUrl = scConfig.publicUrl;
 
 interface LayoutProps {
   layoutData: LayoutServiceData;
-  headLinks: HTMLLink[];
 }
 
 interface RouteFields {
@@ -22,7 +21,7 @@ interface RouteFields {
   Title?: Field;
 }
 
-const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
+const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
   const isPageEditing = layoutData.sitecore.context.pageEditing;
@@ -55,9 +54,6 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <meta property="og:site" content={layoutData?.sitecore?.context?.site?.name} />
         <meta name="description" content="A Verticals demo site."></meta>
-        {headLinks.map((headLink) => (
-          <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
-        ))}
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}

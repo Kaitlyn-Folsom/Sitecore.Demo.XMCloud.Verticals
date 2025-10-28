@@ -9,8 +9,7 @@ import { SitecorePageProps } from 'lib/page-props';
 import Layout from 'src/Layout';
 import { componentBuilder } from 'temp/componentBuilder';
 import { GetStaticProps } from 'next';
-import config from 'temp/config';
-import { siteResolver } from 'lib/site-resolver';
+import scConfig from 'sitecore.config';
 import clientFactory from 'lib/graphql-client-factory';
 
 /**
@@ -38,24 +37,18 @@ const Custom500 = (props: SitecorePageProps): JSX.Element => {
     <SitecoreContext
       componentFactory={componentBuilder.getComponentFactory()}
       layoutData={props.layoutData}
-      api={{
-        edge: {
-          contextId: config.sitecoreEdgeContextId,
-          edgeUrl: config.sitecoreEdgeUrl,
-        },
-      }}
+      api={scConfig.api}
     >
-      <Layout layoutData={props.layoutData} headLinks={props.headLinks} />
+      <Layout layoutData={props.layoutData} />
     </SitecoreContext>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const site = siteResolver.getByName(config.sitecoreSiteName);
   const errorPagesService = new GraphQLErrorPagesService({
     clientFactory,
-    siteName: site.name,
-    language: context.locale || context.defaultLocale || config.defaultLanguage,
+    siteName: scConfig.defaultSite,
+    language: context.locale || context.defaultLocale || scConfig.defaultLanguage,
     retries:
       (process.env.GRAPH_QL_SERVICE_RETRIES &&
         parseInt(process.env.GRAPH_QL_SERVICE_RETRIES, 10)) ||
@@ -74,7 +67,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      headLinks: [],
       layoutData: resultErrorPages?.serverErrorPage?.rendered || null,
     },
   };

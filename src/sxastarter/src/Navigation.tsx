@@ -1,9 +1,9 @@
 import { JSX } from 'react';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore editors.
 // If you're not supporting Sitecore editors, you can remove this.
-const publicUrl = config.publicUrl;
+const publicUrl = scConfig.publicUrl;
 
 const Navigation = (): JSX.Element => (
   <div>

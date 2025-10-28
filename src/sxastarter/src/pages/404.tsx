@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import config from 'temp/config';
+import scConfig from 'sitecore.config';
 import {
   GraphQLErrorPagesService,
   SitecoreContext,
@@ -10,7 +10,6 @@ import NotFound from 'src/NotFound';
 import { componentBuilder } from 'temp/componentBuilder';
 import Layout from 'src/Layout';
 import { GetStaticProps } from 'next';
-import { siteResolver } from 'lib/site-resolver';
 import clientFactory from 'lib/graphql-client-factory';
 
 const Custom404 = (props: SitecorePageProps): JSX.Element => {
@@ -22,24 +21,19 @@ const Custom404 = (props: SitecorePageProps): JSX.Element => {
     <SitecoreContext
       componentFactory={componentBuilder.getComponentFactory()}
       layoutData={props.layoutData}
-      api={{
-        edge: {
-          contextId: config.sitecoreEdgeContextId,
-          edgeUrl: config.sitecoreEdgeUrl,
-        },
-      }}
+      api={scConfig.api}
+      page={page}
     >
-      <Layout layoutData={props.layoutData} headLinks={props.headLinks} />
+      <Layout layoutData={props.layoutData} />
     </SitecoreContext>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const site = siteResolver.getByName(config.sitecoreSiteName);
   const errorPagesService = new GraphQLErrorPagesService({
     clientFactory,
-    siteName: site.name,
-    language: context.locale || config.defaultLanguage,
+    siteName: scConfig.defaultSite,
+    language: context.locale || scConfig.defaultLanguage,
     retries:
       (process.env.GRAPH_QL_SERVICE_RETRIES &&
         parseInt(process.env.GRAPH_QL_SERVICE_RETRIES, 10)) ||
@@ -58,7 +52,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      headLinks: [],
       layoutData: resultErrorPages?.notFoundPage?.rendered || null,
     },
   };

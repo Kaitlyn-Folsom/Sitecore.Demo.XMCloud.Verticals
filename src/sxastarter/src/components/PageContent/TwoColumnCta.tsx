@@ -5,7 +5,7 @@ import {
   LinkField,
   Text,
   Link,
-  useSitecoreContext,
+  useSitecore,
   Placeholder,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
@@ -30,8 +30,8 @@ export type TwoColumnCtaProps = ComponentProps & {
 
 export const Default = (props: TwoColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   const Column = ({
     image,

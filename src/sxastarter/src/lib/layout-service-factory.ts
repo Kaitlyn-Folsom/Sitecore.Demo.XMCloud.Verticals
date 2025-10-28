@@ -1,7 +1,7 @@
 import {
   LayoutService,
   RestLayoutService,
-  GraphQLLayoutService,
+  LayoutService,
   constants,
 } from '@sitecore-content-sdk/nextjs';
 import scConfig from 'sitecore.config';
@@ -17,7 +17,7 @@ export class LayoutServiceFactory {
    */
   create(siteName: string): LayoutService {
     return process.env.FETCH_WITH === constants.FETCH_WITH.GRAPHQL
-      ? new GraphQLLayoutService({
+      ? new LayoutService({
           siteName,
           clientFactory,
           /*

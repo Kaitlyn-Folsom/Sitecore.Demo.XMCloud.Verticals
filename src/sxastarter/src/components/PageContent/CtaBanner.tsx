@@ -7,7 +7,7 @@ import {
   RichText,
   Link,
   LinkField,
-  useSitecoreContext,
+  useSitecore,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import useVisibility from 'src/hooks/useVisibility';
@@ -31,8 +31,8 @@ export type CtaBannerProps = ComponentProps & {
 
 export const Default = (props: CtaBannerProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
 
   return (
@@ -85,8 +85,8 @@ export const Default = (props: CtaBannerProps): JSX.Element => {
 
 export const LargeImage = (props: CtaBannerProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
 
   return (

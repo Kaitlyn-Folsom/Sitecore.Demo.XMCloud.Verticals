@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import { Field, Text, useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { Field, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { CountUp } from 'components/NonSitecore/CountUp';
 
 interface Fields {
@@ -20,8 +20,8 @@ export type RichTextProps = {
 
 export const Default = (props: RichTextProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div

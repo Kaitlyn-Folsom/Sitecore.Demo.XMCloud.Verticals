@@ -1,11 +1,5 @@
 import React, { useCallback, useRef, useState, JSX } from 'react';
-import {
-  Link,
-  LinkField,
-  Text,
-  TextField,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
+import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import PreviewSearchWidget, { ArticleModel } from './Search/PreviewSearch/PreviewSearch';
 import { isSearchSDKEnabled } from 'src/services/SearchSDKService';
 import PreviewSearchIcon from './Search/PreviewSearch/PreviewSearchIcon';
@@ -55,7 +49,7 @@ const getLinkField = (props: NavigationProps): LinkField => ({
 export const Default = (props: NavigationProps): JSX.Element => {
   const [isPreviewSearchOpen, setIsPreviewSearchOpen] = useState(false);
   const [isOpenMenu, openMenu] = useState(false);
-  const { sitecoreContext } = useSitecoreContext();
+  const { page } = useSitecore();
   const containerRef = useRef(null);
   const router = useRouter();
 
@@ -99,7 +93,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
   }
 
   const handleToggleMenu = (event?: React.MouseEvent<HTMLElement>, flag?: boolean): void => {
-    if (event && sitecoreContext?.pageEditing) {
+    if (event && page?.mode.isEditing) {
       event.preventDefault();
     }
 
@@ -172,7 +166,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
 };
 
 const NavigationList = (props: NavigationProps) => {
-  const { sitecoreContext } = useSitecoreContext();
+  const { page } = useSitecore();
   const [active, setActive] = useState(false);
   const classNameList = `${props.fields.Styles.concat('rel-level' + props.relativeLevel).join(
     ' '
@@ -198,7 +192,7 @@ const NavigationList = (props: NavigationProps) => {
       >
         <Link
           field={getLinkField(props)}
-          editable={sitecoreContext.pageEditing}
+          editable={page.mode.isEditing}
           onClick={props.handleClick}
         >
           {getNavigationText(props)}

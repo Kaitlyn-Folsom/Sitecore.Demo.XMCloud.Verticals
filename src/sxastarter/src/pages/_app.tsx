@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app';
 import { I18nProvider } from 'next-localization';
-import { SitecorePageProps } from 'lib/page-props';
+import { SitecorePageProps } from "@sitecore-content-sdk/nextjs"
 import Bootstrap from 'src/Bootstrap';
 import { JSX } from 'react';
-
+import scConfig from 'sitecore.config';
 import 'assets/main.scss';
 
 // DEMO TEAM CUSTOMIZATION - Search SDK integration
@@ -22,7 +22,10 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
         // Note Next.js does not (currently) provide anything for translation, only i18n routing.
         // If your app is not multilingual, next-localization and references to it can be removed.
       */}
-      <I18nProvider lngDict={dictionary} locale={pageProps.locale}>
+      <I18nProvider
+        lngDict={dictionary}
+        locale={pageProps.page?.locale || scConfig.defaultLanguage}
+      >
         {/* DEMO TEAM CUSTOMIZATION - Search SDK integration */}
         {isSearchSDKEnabled ? (
           <WidgetsProvider {...searchSDKConfig}>

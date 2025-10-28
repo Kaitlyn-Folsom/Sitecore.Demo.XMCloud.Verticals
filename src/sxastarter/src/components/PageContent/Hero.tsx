@@ -5,7 +5,7 @@ import {
   RichTextField,
   Text,
   RichText,
-  useSitecoreContext,
+  useSitecore,
   Link,
   LinkField,
   NextImage,
@@ -25,8 +25,8 @@ export type AppPromoProps = {
 
 export const Default = (props: AppPromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div className={`component hero ${props.params.styles.trimEnd()}`} id={id ? id : undefined}>

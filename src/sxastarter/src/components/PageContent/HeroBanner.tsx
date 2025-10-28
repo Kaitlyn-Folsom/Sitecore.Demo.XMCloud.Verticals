@@ -5,7 +5,7 @@ import {
   RichTextField,
   Text,
   RichText,
-  useSitecoreContext,
+  useSitecore,
   Link,
   LinkField,
   Placeholder,
@@ -32,8 +32,8 @@ export type HeroBannerProps = ComponentProps & {
 
 export const Default = (props: HeroBannerProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div

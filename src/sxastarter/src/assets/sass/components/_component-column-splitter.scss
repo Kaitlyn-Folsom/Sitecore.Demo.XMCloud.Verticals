@@ -1,15 +1,13 @@
-@import '@sass/abstracts/vars';
-
 .row.column-splitter {
     margin-left: 0;
     margin-right: 0;
-    padding-left: $default-padding * 0.5;
-    padding-right: $default-padding * 0.5;
+    padding-left: 5px * 0.5;
+    padding-right: 5px * 0.5;
     max-width: none;
     row-gap: 1rem;
 
     > div {
-       padding-left: $default-padding;
-       padding-right: $default-padding;
+       padding-left: 5px;
+       padding-right: 5px;
     }
 }

@@ -8,7 +8,7 @@ import { FilterEqual, WidgetDataType, usePreviewSearch, widget } from '@sitecore
 import { ArticleCard, Presence, PreviewSearch } from '@sitecore-search/ui';
 import { PageController } from '@sitecore-search/react';
 import Spinner from '../components/Spinner/Spinner';
-import { useSitecoreContext } from '@sitecore-content-sdk/nextjs';
+import { useSitecore } from '@sitecore-content-sdk/nextjs';
 
 const DEFAULT_IMG_URL = 'https://placehold.co/500x300?text=No%20Image';
 export type ArticleModel = {
@@ -52,7 +52,7 @@ export const PreviewSearchComponent = ({
   itemRedirectionHandler,
   submitRedirectionHandler,
 }: PreviewSearchProps) => {
-  const { sitecoreContext } = useSitecoreContext();
+  const { page } = useSitecore();
 
   const {
     widgetRef,
@@ -62,7 +62,7 @@ export const PreviewSearchComponent = ({
   } = usePreviewSearch<ArticleModel, InitialState>({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     query: (query): any => {
-      query.getRequest().setSearchFilter(new FilterEqual('tags', sitecoreContext?.site?.name));
+      query.getRequest().setSearchFilter(new FilterEqual('tags', page.siteName));
     },
     state: {
       itemsPerPage: defaultItemsPerPage,
@@ -79,10 +79,10 @@ export const PreviewSearchComponent = ({
     [onKeyphraseChange]
   );
 
-  if (sitecoreContext?.language == 'fr-CA') {
+  if (page.locale == 'fr-CA') {
     PageController.getContext().setLocaleLanguage('fr');
     PageController.getContext().setLocaleCountry('ca');
-  } else if (sitecoreContext?.language == 'ja-JP') {
+  } else if (page.locale == 'ja-JP') {
     PageController.getContext().setLocaleLanguage('ja');
     PageController.getContext().setLocaleCountry('jp');
   } else {

@@ -8,7 +8,7 @@ import {
   withDatasourceCheck,
   RichTextField,
   RichText,
-  useSitecoreContext,
+  useSitecore,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import Link from 'next/link';
@@ -40,8 +40,8 @@ interface AuthorListComponentProps {
 const AuthorListDefault = (props: AuthorListComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const authors = props.fields?.items?.filter((item) => item.name !== 'Data');
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const { t } = useI18n();
 
   return (
@@ -140,8 +140,8 @@ const AuthorListSlider = (props: AuthorListComponentProps): JSX.Element => {
 const AuthorListSimple = (props: AuthorListComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const authors = props.fields?.items?.filter((item) => item.name !== 'Data');
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const { t } = useI18n();
 
   return (

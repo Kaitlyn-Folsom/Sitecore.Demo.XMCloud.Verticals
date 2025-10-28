@@ -1,11 +1,5 @@
 import React, { JSX } from 'react';
-import {
-  Field,
-  ImageField,
-  NextImage,
-  Text,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, NextImage, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { CountUp } from 'components/NonSitecore/CountUp';
 import { DottedAccent } from 'components/NonSitecore/DottedAccent';
 
@@ -30,8 +24,8 @@ export type StatsCounterProps = {
 
 export const Default = (props: StatsCounterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div

@@ -1,10 +1,4 @@
-import {
-  Link,
-  LinkField,
-  Text,
-  TextField,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
+import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import React, { JSX } from 'react';
 
 interface Fields {
@@ -62,7 +56,7 @@ const ComponentContent = (props: ComponentContentProps) => {
 
 export const Default = (props: TitleProps): JSX.Element => {
   const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
-  const { sitecoreContext } = useSitecoreContext();
+  const { page } = useSitecore();
   const text: TextField = datasource?.field?.jsonValue || {};
   const link: LinkField = {
     value: {
@@ -70,7 +64,7 @@ export const Default = (props: TitleProps): JSX.Element => {
       title: datasource?.field?.jsonValue?.value,
     },
   };
-  if (sitecoreContext.pageState !== 'normal') {
+  if (page.layout.sitecore.context !== 'normal') {
     link.value.querystring = `sc_site=${datasource?.url?.siteName}`;
     if (!text?.value) {
       text.value = 'Title field';
@@ -81,7 +75,7 @@ export const Default = (props: TitleProps): JSX.Element => {
   return (
     <ComponentContent styles={props.params.styles} id={props.params.RenderingIdentifier}>
       <>
-        {sitecoreContext.pageEditing ? (
+        {page.mode.isEditing ? (
           <Text field={text} />
         ) : (
           <Link field={link}>

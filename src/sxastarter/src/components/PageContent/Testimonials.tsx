@@ -1,11 +1,5 @@
 import React, { JSX } from 'react';
-import {
-  Field,
-  ImageField,
-  NextImage,
-  Text,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
+import { Field, ImageField, NextImage, Text, useSitecore } from '@sitecore-content-sdk/nextjs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
@@ -31,8 +25,8 @@ export type TestimonialsProps = {
 };
 
 const StarRating = ({ item }: { item: TestimonialItemProps }): JSX.Element => {
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   const rating = item.fields?.Rating.value;
   const ratingField = isPageEditing && <Text field={item.fields?.Rating} />;

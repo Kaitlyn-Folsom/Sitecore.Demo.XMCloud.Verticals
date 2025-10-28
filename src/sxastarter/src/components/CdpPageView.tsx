@@ -1,11 +1,8 @@
-import {
-  CdpHelper,
-  LayoutServicePageState,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
-import { useEffect, JSX } from 'react';
+import { CdpHelper, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { useEffect } from 'react';
 import { pageView } from '@sitecore-cloudsdk/events/browser';
-import scConfig from 'sitecore.config';
+import config from 'sitecore.config';
+import { JSX } from 'react';
 
 /**
  * This is the CDP page view component.
@@ -15,8 +12,9 @@ import scConfig from 'sitecore.config';
  */
 const CdpPageView = (): JSX.Element => {
   const {
-    sitecoreContext: { pageState, route, variantId, site },
-  } = useSitecoreContext();
+    page: { layout, siteName, mode },
+  } = useSitecore();
+  const { route, context } = layout.sitecore;
 
   /**
    * Determines if the page view events should be turned off.
@@ -29,7 +27,7 @@ const CdpPageView = (): JSX.Element => {
 
   useEffect(() => {
     // Do not create events in editing or preview mode or if missing route data
-    if (pageState !== LayoutServicePageState.Normal || !route?.itemId) {
+    if (!mode.isNormal || !route?.itemId) {
       return;
     }
     // Do not create events if disabled (e.g. we don't have consent)
@@ -37,13 +35,13 @@ const CdpPageView = (): JSX.Element => {
       return;
     }
 
-    const language = route.itemLanguage || scConfig.defaultLanguage;
-    const scope = process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE;
+    const language = route.itemLanguage || config.defaultLanguage;
+    const scope = config.personalize?.scope;
 
     const pageVariantId = CdpHelper.getPageVariantId(
       route.itemId,
       language,
-      variantId as string,
+      context.variantId as string,
       scope
     );
     // there can be cases where Events are not initialized which are expected to reject
@@ -54,7 +52,7 @@ const CdpPageView = (): JSX.Element => {
       pageVariantId,
       language,
     }).catch((e) => console.debug(e));
-  }, [pageState, route, variantId, site]);
+  }, [mode, route, context.variantId, siteName]);
 
   return <></>;
 };

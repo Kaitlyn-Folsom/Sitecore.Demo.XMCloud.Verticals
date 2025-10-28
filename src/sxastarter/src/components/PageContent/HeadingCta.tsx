@@ -1,11 +1,5 @@
 import React, { JSX } from 'react';
-import {
-  Field,
-  Text,
-  Link,
-  LinkField,
-  useSitecoreContext,
-} from '@sitecore-content-sdk/nextjs';
+import { Field, Text, Link, LinkField, useSitecore } from '@sitecore-content-sdk/nextjs';
 import Head from 'next/head';
 
 interface Fields {
@@ -22,8 +16,8 @@ export type HeadingCtaProps = {
 
 export const Default = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div
@@ -58,8 +52,8 @@ export const Default = (props: HeadingCtaProps): JSX.Element => {
 
 export const Compact = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div
@@ -92,8 +86,8 @@ export const Compact = (props: HeadingCtaProps): JSX.Element => {
 
 export const PageHeading = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <>
@@ -136,8 +130,8 @@ export const PageHeading = (props: HeadingCtaProps): JSX.Element => {
 
 export const Centered = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div

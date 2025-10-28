@@ -8,7 +8,7 @@ import {
   RichText,
   Link,
   LinkField,
-  useSitecoreContext,
+  useSitecore,
 } from '@sitecore-content-sdk/nextjs';
 import { BannerLayer, ParallaxBanner } from 'react-scroll-parallax';
 
@@ -27,8 +27,8 @@ export type ParallaxBannerProps = {
 
 export const Default = (props: ParallaxBannerProps) => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   const BannerContentBlock = (
     <div className="parallax-banner-content-inner">

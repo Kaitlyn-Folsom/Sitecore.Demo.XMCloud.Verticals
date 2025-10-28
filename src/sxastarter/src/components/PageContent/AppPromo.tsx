@@ -5,7 +5,7 @@ import {
   RichTextField,
   Text,
   RichText,
-  useSitecoreContext,
+  useSitecore,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
 import { useParallax } from 'react-scroll-parallax';
@@ -23,8 +23,8 @@ export type AppPromoProps = {
 
 export const Default = (props: AppPromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const parallaxImg = useParallax<HTMLImageElement>({
     scale: [0.8, 1.2],
   });

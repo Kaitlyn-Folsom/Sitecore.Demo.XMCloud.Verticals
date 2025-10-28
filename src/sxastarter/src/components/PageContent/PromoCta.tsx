@@ -7,7 +7,7 @@ import {
   RichText,
   Link,
   LinkField,
-  useSitecoreContext,
+  useSitecore,
   Placeholder,
   NextImage,
 } from '@sitecore-content-sdk/nextjs';
@@ -33,8 +33,8 @@ export type PromoCtaProps = ComponentProps & {
 
 export const Default = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
 
   return (
@@ -93,8 +93,8 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
 
 export const WithPlaceholderColumn = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
 
   return (
@@ -160,8 +160,8 @@ export const WithPlaceholderColumn = (props: PromoCtaProps): JSX.Element => {
 
 export const WithBackgroundImage = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
-  const { sitecoreContext } = useSitecoreContext();
-  const isPageEditing = sitecoreContext.pageEditing;
+  const { page } = useSitecore();
+  const isPageEditing = page.mode.isEditing;
 
   return (
     <div

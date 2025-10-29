@@ -38,6 +38,7 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const Column = ({
     image,
@@ -79,7 +80,7 @@ export const Default = (props: FourColumnCtaProps): JSX.Element => {
 
   return (
     <div
-      className={`component component-spaced four-column-cta ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced four-column-cta ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">

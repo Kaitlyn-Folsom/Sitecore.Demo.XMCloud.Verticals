@@ -18,12 +18,10 @@ export const Default = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component heading-cta ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component heading-cta ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="row gx-5">
           <div className="col">
@@ -54,12 +52,10 @@ export const Compact = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component heading-cta compact ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component heading-cta compact ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="row">
           <div className="col">
@@ -88,6 +84,7 @@ export const PageHeading = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <>
@@ -97,10 +94,7 @@ export const PageHeading = (props: HeadingCtaProps): JSX.Element => {
         <meta property="og:title" content={props.fields?.Heading?.value} />
         <meta property="og:type" content="page" />
       </Head>
-      <div
-        className={`component heading-cta ${props.params.styles.trimEnd()}`}
-        id={id ? id : undefined}
-      >
+      <div className={`component heading-cta ${sxaStyles}`} id={id ? id : undefined}>
         <div className="container container-wide">
           <div className="row gx-5">
             <div className="col">
@@ -132,12 +126,10 @@ export const Centered = (props: HeadingCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component heading-cta ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component heading-cta ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="heading-content-wrapper mx-auto text-center">
           <h6 className="eyebrow-accent">

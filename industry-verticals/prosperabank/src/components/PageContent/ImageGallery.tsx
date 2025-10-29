@@ -20,12 +20,10 @@ export type ImageGalleryProps = {
 export const Default = (props: ImageGalleryProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const images = props.fields?.items;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component image-gallery ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component image-gallery ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <DottedAccent className="dotted-accent-top" />
         <div className="image-gallery-grid">

@@ -96,6 +96,7 @@ export const PreviewSearchComponent = ({
         onSubmit={(e) => {
           e.preventDefault();
           const { value: query } = e.currentTarget.elements[0] as HTMLInputElement;
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
           submitRedirectionHandler && submitRedirectionHandler(query);
         }}
         className="sitecore-preview-search-form"
@@ -142,6 +143,7 @@ export const PreviewSearchComponent = ({
                               index,
                               sourceId: article.source_id,
                             });
+                            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                             itemRedirectionHandler && itemRedirectionHandler(article);
                           }}
                           className="sitecore-preview-search-link"

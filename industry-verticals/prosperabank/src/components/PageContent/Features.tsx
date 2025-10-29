@@ -28,12 +28,10 @@ export type FeaturesProps = {
 
 export const Default = (props: FeaturesProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component features component-spaced ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component features component-spaced ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="info">
           <div className="eyebrow-accent">

@@ -36,13 +36,10 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component promo-cta ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-      ref={domRef}
-    >
+    <div className={`component promo-cta ${sxaStyles}`} id={id ? id : undefined} ref={domRef}>
       <div className="container">
         <div className="row row-gap-4 main-content align-items-center">
           <div className="col-lg-5 text-center text-lg-start">
@@ -96,10 +93,11 @@ export const WithPlaceholderColumn = (props: PromoCtaProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component promo-cta with-placeholder-column ${props.params.styles.trimEnd()}`}
+      className={`component promo-cta with-placeholder-column ${sxaStyles}`}
       id={id ? id : undefined}
       ref={domRef}
     >
@@ -162,10 +160,11 @@ export const WithBackgroundImage = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component promo-cta with-background-image ${props.params.styles.trimEnd()}`}
+      className={`component promo-cta with-background-image ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <ParallaxBackgroundImage BackgroundImage={props.fields.Image} />

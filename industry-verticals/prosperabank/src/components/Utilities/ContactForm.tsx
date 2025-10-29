@@ -17,10 +17,11 @@ export type ContactFormProps = {
 
 export const Default = (props: ContactFormProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component contact-form component-spaced ${props.params.styles.trimEnd()}`}
+      className={`component contact-form component-spaced ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container container-widest-fluid">

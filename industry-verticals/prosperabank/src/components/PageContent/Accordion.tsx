@@ -62,12 +62,10 @@ const AccordionItem = ({ item }: { item: AccordionItemProps }): JSX.Element => {
 export const Default = (props: AccordionProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const accordionItems = props.fields?.items;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component accordion component-spaced ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component accordion component-spaced ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         {accordionItems?.map((item) => (
           <AccordionItem key={item.url} item={item} />

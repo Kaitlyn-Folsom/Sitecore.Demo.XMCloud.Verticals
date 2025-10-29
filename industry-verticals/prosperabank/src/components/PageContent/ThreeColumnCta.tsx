@@ -34,6 +34,7 @@ export const Default = (props: ThreeColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const Column = ({
     image,
@@ -78,7 +79,7 @@ export const Default = (props: ThreeColumnCtaProps): JSX.Element => {
 
   return (
     <div
-      className={`component component-spaced three-column-cta ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced three-column-cta ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
@@ -113,6 +114,7 @@ export const WithIcons = (props: ThreeColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const Column = ({
     image,
@@ -154,7 +156,7 @@ export const WithIcons = (props: ThreeColumnCtaProps): JSX.Element => {
 
   return (
     <div
-      className={`component component-spaced three-column-cta with-icons ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced three-column-cta with-icons ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
@@ -189,6 +191,7 @@ export const WithIconsCompact = (props: ThreeColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const Column = ({
     image,
@@ -232,7 +235,7 @@ export const WithIconsCompact = (props: ThreeColumnCtaProps): JSX.Element => {
 
   return (
     <div
-      className={`component component-spaced three-column-cta with-icons with-icons-compact ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced three-column-cta with-icons with-icons-compact ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">

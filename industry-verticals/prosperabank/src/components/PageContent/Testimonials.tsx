@@ -82,12 +82,10 @@ const Testimonial = ({ item }: { item: TestimonialItemProps }): JSX.Element => {
 export const Default = (props: TestimonialsProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const testimonials = props.fields?.items;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component testimonials ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component testimonials ${sxaStyles}`} id={id ? id : undefined}>
       <div className="">
         <Swiper
           effect="coverflow"

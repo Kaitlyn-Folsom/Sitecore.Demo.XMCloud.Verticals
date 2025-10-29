@@ -3,15 +3,15 @@
 import { combineImportEntries, defaultImportEntries } from '@sitecore-content-sdk/nextjs/codegen';
 // end of built-in imports
 
-import { Link, Text, useSitecore, Placeholder, RichText, NextImage, EditMode, withDatasourceCheck, CdpHelper, Image as Image_8a80e63291fea86e0744df19113dc44bec187216 } from '@sitecore-content-sdk/nextjs';
-import { useCallback, useRef, useState, useEffect, useMemo } from 'react';
-import React from 'react';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
+import { useCallback, useRef, useState, useEffect, useMemo } from 'react';
+import React from 'react';
+import { Placeholder, RichText, NextImage, Link, Text, useSitecore, withDatasourceCheck, CdpHelper, Image as Image_8a80e63291fea86e0744df19113dc44bec187216 } from '@sitecore-content-sdk/nextjs';
 import PreviewSearchWidget from 'src/components/Search/PreviewSearch/PreviewSearch';
 import { isSearchSDKEnabled } from 'src/services/SearchSDKService';
 import PreviewSearchIcon from 'src/components/Search/PreviewSearch/PreviewSearchIcon';
-import ClickOutside from 'src/components/Search/ClickOutside';
+import ClickOutside from 'src/hooks/ClickOutside';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
@@ -35,18 +35,15 @@ import { IconAccent } from 'components/NonSitecore/IconAccent';
 
 const importMap = [
   {
-    module: '@sitecore-content-sdk/nextjs',
+    module: 'next/head',
     exports: [
-      { name: 'Link', value: Link },
-      { name: 'Text', value: Text },
-      { name: 'useSitecore', value: useSitecore },
-      { name: 'Placeholder', value: Placeholder },
-      { name: 'RichText', value: RichText },
-      { name: 'NextImage', value: NextImage },
-      { name: 'EditMode', value: EditMode },
-      { name: 'withDatasourceCheck', value: withDatasourceCheck },
-      { name: 'CdpHelper', value: CdpHelper },
-      { name: 'Image', value: Image_8a80e63291fea86e0744df19113dc44bec187216 },
+      { name: 'default', value: Head },
+    ]
+  },
+  {
+    module: 'lib/sitecore-client',
+    exports: [
+      { name: 'default', value: client },
     ]
   },
   {
@@ -61,15 +58,17 @@ const importMap = [
     ]
   },
   {
-    module: 'next/head',
+    module: '@sitecore-content-sdk/nextjs',
     exports: [
-      { name: 'default', value: Head },
-    ]
-  },
-  {
-    module: 'lib/sitecore-client',
-    exports: [
-      { name: 'default', value: client },
+      { name: 'Placeholder', value: Placeholder },
+      { name: 'RichText', value: RichText },
+      { name: 'NextImage', value: NextImage },
+      { name: 'Link', value: Link },
+      { name: 'Text', value: Text },
+      { name: 'useSitecore', value: useSitecore },
+      { name: 'withDatasourceCheck', value: withDatasourceCheck },
+      { name: 'CdpHelper', value: CdpHelper },
+      { name: 'Image', value: Image_8a80e63291fea86e0744df19113dc44bec187216 },
     ]
   },
   {
@@ -91,7 +90,7 @@ const importMap = [
     ]
   },
   {
-    module: 'src/components/Search/ClickOutside',
+    module: 'src/hooks/ClickOutside',
     exports: [
       { name: 'default', value: ClickOutside },
     ]

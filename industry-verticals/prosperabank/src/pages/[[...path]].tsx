@@ -1,8 +1,8 @@
 import { useEffect, JSX } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import sites from '.sitecore/sites.json';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
-// import { SitecoreProvider, ComponentPropsContext } from '@sitecore-content-sdk/nextjs';
 import { handleEditorFastRefresh, extractPath } from '@sitecore-content-sdk/nextjs/utils';
 import { isDesignLibraryPreviewData } from '@sitecore-content-sdk/nextjs/editing';
 import {
@@ -12,7 +12,6 @@ import {
   StaticPath,
   SiteInfo,
 } from '@sitecore-content-sdk/nextjs';
-// import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import components from '.sitecore/component-map';
 import scConfig from 'sitecore.config';
 import client from 'lib/sitecore-client';
@@ -36,22 +35,6 @@ const SitecorePage = ({ notFound, componentProps, page }: SitecorePageProps): JS
     </ComponentPropsContext>
   );
 };
-
-// export const getStaticProps: GetStaticProps = async (context) => {
-//   const props = await sitecorePagePropsFactory.create(context);
-//   return {
-//     props,
-//     revalidate: 5, // In seconds
-//     notFound: props.notFound, // Returns custom 404 page with a status code of 404 when true
-//   };
-// };
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   return {
-//     paths: [],
-//     fallback: 'blocking',
-//   };
-// };
 
 // This function gets called at build and export time to determine
 // pages for SSG ("paths", as tokenized array).

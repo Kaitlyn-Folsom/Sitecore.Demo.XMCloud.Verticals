@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import { JSX } from 'react';
 
 export type PreviewSearchIconProps = {
   onClick?: (keyphrase: string) => void;
@@ -15,6 +15,7 @@ const PreviewSearchIcon = ({
     <span
       className={`preview-search-content-icon fa fa-search ${className || ''}`}
       onClick={() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         onClick && onClick(keyphrase);
       }}
     />

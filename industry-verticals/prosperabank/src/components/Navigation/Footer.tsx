@@ -39,12 +39,10 @@ export type FooterProps = {
 
 export const Default = (props: FooterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component component-spaced footer ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component component-spaced footer ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="content">
           <div className="logo">
@@ -105,10 +103,11 @@ export const Default = (props: FooterProps): JSX.Element => {
 
 export const WithSocials = (props: FooterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component component-spaced footer with-socials ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced footer with-socials ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">

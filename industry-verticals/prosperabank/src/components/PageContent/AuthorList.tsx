@@ -43,12 +43,10 @@ const AuthorListDefault = (props: AuthorListComponentProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const { t } = useI18n();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component author-list ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component author-list ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="background p-3 p-sm-5">
           {authors?.map((author, i) => (
@@ -90,10 +88,11 @@ const AuthorListDefault = (props: AuthorListComponentProps): JSX.Element => {
 const AuthorListSlider = (props: AuthorListComponentProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const authors = props.fields?.items?.filter((item) => item.name !== 'Data');
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component author-list author-list-slider ${props.params.styles.trimEnd()}`}
+      className={`component author-list author-list-slider ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
@@ -143,10 +142,11 @@ const AuthorListSimple = (props: AuthorListComponentProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const { t } = useI18n();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component author-list author-list-simple ${props.params.styles.trimEnd()}`}
+      className={`component author-list author-list-simple ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">

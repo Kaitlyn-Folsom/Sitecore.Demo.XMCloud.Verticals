@@ -32,6 +32,7 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const Column = ({
     image,
@@ -82,10 +83,7 @@ export const Default = (props: TwoColumnCtaProps): JSX.Element => {
   };
 
   return (
-    <div
-      className={`component two-column-cta pb-5 ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component two-column-cta pb-5 ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="row">
           <Column

@@ -31,12 +31,10 @@ export type AuthorWidgetProps = {
 
 const AuthorWidgetDefault = (props: AuthorWidgetProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component author-widget ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component author-widget ${sxaStyles}`} id={id ? id : undefined}>
       <div className="author-card row g-0">
         <div className="col-auto">
           <NextImage field={props.fields.Photo} className="author-img" width={48} height={48} />
@@ -56,12 +54,10 @@ const AuthorWidgetDefault = (props: AuthorWidgetProps): JSX.Element => {
 
 const AuthorWidgetWithSocials = (props: AuthorWidgetProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component author-widget with-socials ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component author-widget with-socials ${sxaStyles}`} id={id ? id : undefined}>
       <div className="author-card row g-0">
         <div className="col-auto">
           <NextImage field={props.fields.Photo} className="author-img" width={80} height={80} />

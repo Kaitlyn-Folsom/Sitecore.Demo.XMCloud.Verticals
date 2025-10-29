@@ -4,16 +4,13 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 
 // Components imported from the app itself
-import * as Title from 'src/components/Title';
 import * as SitecoreStyles from 'src/components/SitecoreStyles';
 import * as RowSplitter from 'src/components/RowSplitter';
 import * as RichText from 'src/components/RichText';
 import * as Promo from 'src/components/Promo';
 import * as PartialDesignDynamicPlaceholder from 'src/components/PartialDesignDynamicPlaceholder';
-import * as PageContent from 'src/components/PageContent';
 import * as Navigation from 'src/components/Navigation';
 import * as LinkList from 'src/components/LinkList';
-import * as Image from 'src/components/Image';
 import * as FEAASScripts from 'src/components/FEAASScripts';
 import * as ContentBlock from 'src/components/ContentBlock';
 import * as Container from 'src/components/Container';
@@ -24,7 +21,6 @@ import * as LoanCalculator from 'src/components/Utilities/LoanCalculator';
 import * as LanguageSwitcher from 'src/components/Utilities/LanguageSwitcher';
 import * as ContactForm from 'src/components/Utilities/ContactForm';
 import * as ApplicationForm from 'src/components/Utilities/ApplicationForm';
-import * as ClickOutside from 'src/components/Search/ClickOutside';
 import * as Spinner from 'src/components/Search/components/Spinner/Spinner';
 import * as PreviewSearchIcon from 'src/components/Search/PreviewSearch/PreviewSearchIcon';
 import * as PreviewSearch from 'src/components/Search/PreviewSearch/PreviewSearch';
@@ -72,16 +68,13 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCWrapper],
   ['FEaaSWrapper', FEaaSWrapper],
   ['Form', Form],
-  ['Title', Title],
   ['SitecoreStyles', SitecoreStyles],
   ['RowSplitter', RowSplitter],
   ['RichText', RichText],
   ['Promo', Promo],
   ['PartialDesignDynamicPlaceholder', PartialDesignDynamicPlaceholder],
-  ['PageContent', PageContent],
   ['Navigation', Navigation],
   ['LinkList', LinkList],
-  ['Image', Image],
   ['FEAASScripts', FEAASScripts],
   ['ContentBlock', ContentBlock],
   ['Container', Container],
@@ -92,7 +85,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LanguageSwitcher', LanguageSwitcher],
   ['ContactForm', ContactForm],
   ['ApplicationForm', ApplicationForm],
-  ['ClickOutside', ClickOutside],
   ['Spinner', Spinner],
   ['PreviewSearchIcon', PreviewSearchIcon],
   ['PreviewSearch', PreviewSearch],

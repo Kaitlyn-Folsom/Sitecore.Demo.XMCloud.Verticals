@@ -35,6 +35,7 @@ export const Default = (props: DocumentsListProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const DocumentItem = ({
     image,
@@ -68,7 +69,7 @@ export const Default = (props: DocumentsListProps): JSX.Element => {
 
   return (
     <div
-      className={`component component-spaced documents-list ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced documents-list ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">

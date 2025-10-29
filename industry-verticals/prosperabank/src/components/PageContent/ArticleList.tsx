@@ -96,10 +96,11 @@ const ArticleListDefault = (props: ArticleListComponentProps): JSX.Element => {
 const ArticleListThreeColumn = (props: ArticleListComponentProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const newsItems = getNewsItems(props.fields?.items, parseInt(props.params?.NumberOfItems));
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component component-spaced article-list ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced article-list ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
@@ -125,10 +126,11 @@ const ArticleListSimplified = (props: ArticleListComponentProps): JSX.Element =>
   const newsItems = getNewsItems(props.fields?.items, parseInt(props.params?.NumberOfItems));
   const allArticlesPageHref = getAllArticlesPageHref(props.fields?.items);
   const { t } = useI18n();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component component-spaced article-list ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced article-list ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container">
@@ -175,10 +177,11 @@ const ArticleListSimplified = (props: ArticleListComponentProps): JSX.Element =>
 const ArticleListGrid = (props: ArticleListComponentProps): JSX.Element => {
   const id = props.params?.RenderingIdentifier;
   const newsItems = getNewsItems(props.fields?.items, parseInt(props.params?.NumberOfItems));
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component component-spaced article-list ${props.params.styles.trimEnd()}`}
+      className={`component component-spaced article-list ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container container-wide">

@@ -5,7 +5,7 @@ const easeOutExpo = (t: number) => {
 };
 
 const useScrollTriggeredCountUp = (
-  ref: React.RefObject<HTMLElement>,
+  ref: React.RefObject<HTMLElement | null>,
   end: number,
   duration = 2000
 ) => {
@@ -57,7 +57,7 @@ const useScrollTriggeredCountUp = (
 };
 
 export const CountUp = ({ value }: { value: number }): JSX.Element => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const count = useScrollTriggeredCountUp(ref, value);
 
   return <span ref={ref}>{count}</span>;

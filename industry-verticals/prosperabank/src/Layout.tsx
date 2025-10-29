@@ -9,7 +9,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import SitecoreStyles from 'components/SitecoreStyles';
 
 interface LayoutProps {
-  page: Page
+  page: Page;
 }
 
 interface RouteFields {
@@ -18,7 +18,6 @@ interface RouteFields {
 }
 
 const Layout = ({ page }: LayoutProps): JSX.Element => {
-
   const { layout, mode } = page;
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
@@ -61,7 +60,6 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
               </footer>
             </>
           )}
-
         </div>
       </ParallaxProvider>
     </>

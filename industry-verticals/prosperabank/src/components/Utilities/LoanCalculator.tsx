@@ -59,11 +59,10 @@ export const Default = (props: LoanCalculatorProps): JSX.Element => {
     setTotalInterest(parseFloat(totalInterestCalculation.toFixed(2)));
   }, [loanAmount, loanTerm, props.fields.InterestRate.value, props.fields.BankFee.value]);
 
+  const sxaStyles = `${props.params?.styles || ''}`;
+
   return (
-    <div
-      className={`component loan-calculator ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component loan-calculator ${sxaStyles}`} id={id ? id : undefined}>
       <div className="loan-calculator-input-group">
         <div className="row justify-content-between">
           <div className="col-auto">

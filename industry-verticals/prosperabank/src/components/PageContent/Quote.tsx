@@ -16,9 +16,10 @@ export type PromoCtaProps = ComponentProps & {
 
 export const Default = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div className={`component quote ${props.params.styles.trimEnd()}`} id={id ? id : undefined}>
+    <div className={`component quote ${sxaStyles}`} id={id ? id : undefined}>
       <svg
         id="Layer_2"
         data-name="Layer 2"
@@ -54,12 +55,10 @@ export const Default = (props: PromoCtaProps): JSX.Element => {
 
 export const Simple = (props: PromoCtaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component quote simple ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component quote simple ${sxaStyles}`} id={id ? id : undefined}>
       <div className="row gx-0">
         <div className="col-auto me-3">
           <NextImage field={props.fields.Image} className="author-image" width={48} height={48} />

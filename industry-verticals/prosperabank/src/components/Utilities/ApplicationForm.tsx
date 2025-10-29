@@ -26,12 +26,10 @@ export type ApplicationFormProps = {
 
 export const Default = (props: ApplicationFormProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component application-form ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component application-form ${sxaStyles}`} id={id ? id : undefined}>
       <div className="application-form-inner">
         <div className="container">
           <div className="title">

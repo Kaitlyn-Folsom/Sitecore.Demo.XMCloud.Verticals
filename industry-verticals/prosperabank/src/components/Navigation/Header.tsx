@@ -29,9 +29,10 @@ export type WithImageProps = ComponentProps & {
 
 export const WithLogoImage = (props: WithImageProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div className={`component header ${props.params.styles.trimEnd()}`} id={id ? id : undefined}>
+    <div className={`component header ${sxaStyles}`} id={id ? id : undefined}>
       <div className={`container container-${props.params?.ContainerWidth?.toLowerCase()}-fluid`}>
         <div className="row align-items-center">
           <div className="col-auto">

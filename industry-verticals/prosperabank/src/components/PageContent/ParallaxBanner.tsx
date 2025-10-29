@@ -29,6 +29,7 @@ export const Default = (props: ParallaxBannerProps) => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   const BannerContentBlock = (
     <div className="parallax-banner-content-inner">
@@ -73,9 +74,7 @@ export const Default = (props: ParallaxBannerProps) => {
 
   return (
     <div
-      className={`component parallax-banner ${
-        isPageEditing ? 'edit-mode' : ''
-      } ${props.params.styles.trimEnd()}`}
+      className={`component parallax-banner ${isPageEditing ? 'edit-mode' : ''} ${sxaStyles}`}
       id={id ? id : undefined}
     >
       {isPageEditing ? (

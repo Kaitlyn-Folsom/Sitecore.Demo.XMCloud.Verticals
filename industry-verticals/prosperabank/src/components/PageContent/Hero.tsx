@@ -27,9 +27,10 @@ export const Default = (props: AppPromoProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div className={`component hero ${props.params.styles.trimEnd()}`} id={id ? id : undefined}>
+    <div className={`component hero ${sxaStyles}`} id={id ? id : undefined}>
       <picture>
         <NextImage field={props.fields.Image} className="" width={1920} height={400}></NextImage>
       </picture>

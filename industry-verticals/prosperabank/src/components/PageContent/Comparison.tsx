@@ -22,12 +22,10 @@ export const Default = (props: RichTextProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component comparison ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component comparison ${sxaStyles}`} id={id ? id : undefined}>
       <div className="title">
         <Text field={props.fields?.Title1} />
       </div>

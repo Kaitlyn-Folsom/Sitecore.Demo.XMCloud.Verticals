@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { I18nProvider } from 'next-localization';
-import { SitecorePageProps } from "@sitecore-content-sdk/nextjs"
+import { SitecorePageProps } from '@sitecore-content-sdk/nextjs';
 import Bootstrap from 'src/Bootstrap';
 import { JSX } from 'react';
 import scConfig from 'sitecore.config';

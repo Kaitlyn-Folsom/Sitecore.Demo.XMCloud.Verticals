@@ -48,11 +48,10 @@ export const Default = (props: CarouselComponentProps): JSX.Element => {
     setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : props.fields.items.length - 1));
   };
 
+  const sxaStyles = `${props.params?.styles || ''}`;
+
   return (
-    <section
-      className={`component carousel ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <section className={`component carousel ${sxaStyles}`} id={id ? id : undefined}>
       <div className="carousel-inner">
         {props.fields.items.map((item, i) => (
           <div key={i} className={'carousel-item ' + (i == index ? 'active' : '')}>

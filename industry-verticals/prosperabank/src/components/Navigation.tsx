@@ -3,7 +3,7 @@ import { Link, LinkField, Text, TextField, useSitecore } from '@sitecore-content
 import PreviewSearchWidget, { ArticleModel } from './Search/PreviewSearch/PreviewSearch';
 import { isSearchSDKEnabled } from 'src/services/SearchSDKService';
 import PreviewSearchIcon from './Search/PreviewSearch/PreviewSearchIcon';
-import ClickOutside from './Search/ClickOutside';
+import ClickOutside from '../hooks/ClickOutside';
 import { useRouter } from 'next/router';
 
 interface Fields {

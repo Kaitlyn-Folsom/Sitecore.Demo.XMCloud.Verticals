@@ -34,10 +34,11 @@ export const Default = (props: CtaBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component cta-banner component-spaced ${props.params.styles.trimEnd()}`}
+      className={`component cta-banner component-spaced ${sxaStyles}`}
       id={id ? id : undefined}
       ref={domRef}
     >
@@ -88,10 +89,11 @@ export const LargeImage = (props: CtaBannerProps): JSX.Element => {
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
   const [isVisible, domRef] = useVisibility();
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component cta-banner component-spaced with-large-image with-dotted-accents ${props.params.styles.trimEnd()}`}
+      className={`component cta-banner component-spaced with-large-image with-dotted-accents ${sxaStyles}`}
       id={id ? id : undefined}
       ref={domRef}
     >

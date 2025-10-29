@@ -26,10 +26,11 @@ export const Default = (props: StatsCounterProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
     <div
-      className={`component stats-counter component-spaced ${props.params.styles.trimEnd()}`}
+      className={`component stats-counter component-spaced ${sxaStyles}`}
       id={id ? id : undefined}
     >
       <div className="container container-wide-fluid">

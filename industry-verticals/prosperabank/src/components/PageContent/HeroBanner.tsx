@@ -34,12 +34,10 @@ export const Default = (props: HeroBannerProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
   const { page } = useSitecore();
   const isPageEditing = page.mode.isEditing;
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component hero-banner ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component hero-banner ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container container-wide">
         <div className="hero-row">
           <div className="content-column">

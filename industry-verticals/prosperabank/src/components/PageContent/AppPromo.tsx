@@ -28,12 +28,10 @@ export const Default = (props: AppPromoProps): JSX.Element => {
   const parallaxImg = useParallax<HTMLImageElement>({
     scale: [0.8, 1.2],
   });
+  const sxaStyles = `${props.params?.styles || ''}`;
 
   return (
-    <div
-      className={`component app-promo ${props.params.styles.trimEnd()}`}
-      id={id ? id : undefined}
-    >
+    <div className={`component app-promo ${sxaStyles}`} id={id ? id : undefined}>
       <div className="container">
         <div className="row row-gap-5 align-items-center g-5">
           <div className="col-lg-6 text-center text-lg-start">

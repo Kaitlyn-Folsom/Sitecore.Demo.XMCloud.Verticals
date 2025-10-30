@@ -47,7 +47,7 @@
     }
   },
   "deployItems": {
-    "modules": ["Project.retail", "skywings", "forge", "gridwell", "prosperabank"]
+    "modules": ["prosperabank"]
   },
   "postActions": {
     "actions": {

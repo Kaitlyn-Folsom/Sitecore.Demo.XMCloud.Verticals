@@ -83,10 +83,15 @@ export const Default = (props: NavigationProps): JSX.Element => {
       ? `${props.params.GridParameters ?? ''} ${props.params.Styles ?? ''}`.trimEnd()
       : '';
   const id = props.params != null ? props.params.RenderingIdentifier : null;
+  console.log('STYLES: ', styles);
+  console.log('props: ', props);
 
   if (!Object.values(props.fields).length) {
     return (
-      <div className={`component navigation ${styles}`} id={id ? id : undefined}>
+      <div
+        className={`component navigation col-12 position-right navigation-horizontal ${styles}`}
+        id={id ? id : undefined}
+      >
         <div className="component-content">[Navigation]</div>
       </div>
     );
@@ -128,7 +133,10 @@ export const Default = (props: NavigationProps): JSX.Element => {
   }
 
   return (
-    <div className={`component navigation ${styles}`} id={id ? id : undefined}>
+    <div
+      className={`component navigation col-12 position-right navigation-horizontal ${styles}`}
+      id={id ? id : undefined}
+    >
       {!isPreviewSearchOpen && (
         <label className="menu-mobile-navigate-wrapper">
           <input
